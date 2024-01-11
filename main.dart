@@ -1,19 +1,11 @@
-import 'Employee.dart';
-import 'Person.dart';
-
 void main(List<String> args) {
-  final people = <Person>[
-    Person(name: 'Kate', age: 22),
-    Employee(age: 26, name: 'Dasha', works: 'Undex'),
-    Person(age: 25, name: 'Dima'),
-    Person(age: 34, name: 'Viktor'),
-    Employee(age: 45, name: 'Masha', works: 'Google'),
-  ];
+  final number = '23.4';
+  final count = number.toDouble()! + 12.4;
+  print(count);
+}
 
-  print('Работающая группа');
-  people.forEach((element) {
-    if (element is Employee) {
-      print(element);
-    }
-  });
+extension on String {
+  double? toDouble() {
+    return double.tryParse(this);
+  }
 }
