@@ -1,11 +1,11 @@
-void main(List<String> args) {
-  final number = '23.4';
-  final count = number.toDouble()! + 12.4;
-  print(count);
-}
+import 'Person.dart';
 
-extension on String {
-  double? toDouble() {
-    return double.tryParse(this);
-  }
+void main(List<String> args) {
+  final person = <Person>[
+    Person(age: 22, name: 'Tozik'),
+    Person(age: 34, name: 'Kate')
+  ];
+  person.forEach((element) {
+    print(element);
+  });
 }
