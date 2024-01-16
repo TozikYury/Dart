@@ -18,7 +18,7 @@ class DivbyZero {
 
 void main(List<String> args) {
   try {
-    var count = div('23hjbu', '8');
+    var count = div('34', '8');
     print(count.toStringAsFixed(3));
   } on IncorrectValues catch (e) {
     print(e);
